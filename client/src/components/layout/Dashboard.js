@@ -1,25 +1,23 @@
-import React, { Component } from 'react'
-import {connect} from 'react-redux';
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
 class Dashboard extends Component {
-
-  componentDidMount(){
-    if(!this.props.auth.isAuthenticated){
-      this.props.history.push("/login")
-    }
-  }
+  componentDidMount() {}
   render() {
     return (
       <div>
         <h1>Dashboard</h1>
       </div>
-    )
+    );
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors
-})
+});
 
-export default connect(mapStateToProps, {})(Dashboard)
+export default connect(
+  mapStateToProps,
+  {}
+)(Dashboard);
