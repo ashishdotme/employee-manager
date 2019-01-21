@@ -4,9 +4,25 @@ import { Provider } from "react-redux";
 
 import Navbar from "./components/layout/Navbar";
 import Dashboard from "./components/layout/Dashboard";
+import Employees from "./components/employees/Employees";
+import styled from "styled-components";
+import Sidebar from "./components/sidebar/Sidebar";
 
 import "./App.css";
 import store from "./store";
+
+const Wrapper = styled.div`
+  display: flex;
+  height: 100vh;
+  background-color: #f7f8fc;
+`;
+
+const ListWrapper = styled.div`
+  padding: 15px 30px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+`;
 
 class App extends Component {
   render() {
@@ -15,9 +31,13 @@ class App extends Component {
         <Router>
           <div className="App">
             <Navbar />
-            <div className="container">
-              <Route exact path="/" component={Dashboard} />
-            </div>
+            <Wrapper>
+              <Sidebar />
+              <ListWrapper>
+                <Route exact path="/" component={Dashboard} />
+                <Route exact path="/employees" component={Employees} />
+              </ListWrapper>
+            </Wrapper>
           </div>
         </Router>
       </Provider>

@@ -1,7 +1,7 @@
 import { GET_EMPLOYEES, GET_ERRORS, EMPLOYEES_LOADING } from "./types";
 import axios from "axios";
 
-export const getLinks = () => dispatch => {
+export const getEmployees = () => dispatch => {
   dispatch(setLinksLoading());
   axios
     .get("api/employees")

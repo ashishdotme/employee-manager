@@ -22,7 +22,7 @@ router.post("/", (req, res) => {
 
   const newEmployee = new Employee({
     name: req.body.name,
-    mob: req.body.mob,
+    mobile: req.body.mobile,
     email: req.body.email
   });
 
