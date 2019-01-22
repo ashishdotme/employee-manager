@@ -1,11 +1,28 @@
-# React + Redux + Bootstrap starter project
+# Employee Management
 
-This project provides you with the code you need to build express + react + redux based app. It includes jwt based authentication.
+Simple crud app made with react.
 
-## Installation
+## Setup
 
 ```bash
-$ git clone git remote add origin https://github.com/ashishdotme/express-react-redux-bootstrap.git app-name
-$ cd app-name
-$ npm install
+$ git clone https://github.com/ashishdotme/employee-manager.git
+$ cd employee-manager
+$ yarn install
+$ yarn run client-install
 ```
+
+## Run app
+
+```bash
+$ npm run dev
+```
+
+## Demo
+
+https://employee-team.herokuapp.com/
+
+## Screenshots
+
+![employee-manager](screenshots/1.png)
+
+![employee-manager](screenshots/2.png)
