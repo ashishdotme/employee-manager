@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Button } from "antd";
 import { getEmployees } from "../../actions/empoyeeActions";
 
 class Employees extends Component {
@@ -18,7 +20,21 @@ class Employees extends Component {
     ));
     return (
       <React.Fragment>
-        <h4 className="mb-4">Education Credentials</h4>
+        <div className="clearfix mb-3 mt-2">
+          <div className="float-right">
+            <Link to="/employees">
+              <Button
+                type="primary"
+                size="medium"
+                block={true}
+                className="button"
+              >
+                Create
+              </Button>
+            </Link>
+          </div>
+        </div>
+
         <div className="table-responsive">
           <table className="table">
             <thead>
