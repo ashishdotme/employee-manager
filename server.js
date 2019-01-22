@@ -15,15 +15,9 @@ const db = require("./config/keys").mongoURI;
 
 // Connect to MongoDB
 mongoose
-  .connect(
-    db,
-    {
-      auth: { authSource: "admin" },
-      useNewUrlParser: true
-    }
-  )
-  .then(() => console.log("Mongodb connected"))
-  .catch(error => console.log(error));
+  .connect(db)
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log(err));
 
 // Use routes
 app.use("/api/employees", employees);
