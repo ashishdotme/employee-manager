@@ -22,8 +22,6 @@ mongoose
 // Use routes
 app.use("/api/employees", employees);
 
-app.get("/", (req, res) => res.send("Hello world"));
-
 // Server static assets if in production
 if (process.env.NODE_ENV === "production") {
   // Set static folder
