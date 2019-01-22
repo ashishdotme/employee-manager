@@ -22,7 +22,7 @@ class Employees extends Component {
       <React.Fragment>
         <div className="clearfix mb-3 mt-2">
           <div className="float-right">
-            <Link to="/employees">
+            <Link to="/add-employee">
               <Button
                 type="primary"
                 size="medium"

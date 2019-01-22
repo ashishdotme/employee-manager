@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import Navbar from "./components/layout/Navbar";
 import Dashboard from "./components/layout/Dashboard";
 import Employees from "./components/employees/Employees";
+import EmployeeAddForm from "./components/employees/EmployeeAddForm";
 import styled from "styled-components";
 import Sidebar from "./components/sidebar/Sidebar";
 
@@ -36,6 +37,7 @@ class App extends Component {
               <ListWrapper>
                 <Route exact path="/" component={Dashboard} />
                 <Route exact path="/employees" component={Employees} />
+                <Route exact path="/add-employee" component={EmployeeAddForm} />
               </ListWrapper>
             </Wrapper>
           </div>

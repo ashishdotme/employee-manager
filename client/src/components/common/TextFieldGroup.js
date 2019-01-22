@@ -15,7 +15,7 @@ const TextFieldGroup = ({
 }) => {
   return (
     <div>
-      <label className="form-control-label" for={name}>
+      <label className="form-control-label mt-2" for={name}>
         {label}
       </label>
       <input
